@@ -1,7 +1,6 @@
 die Woody;
 void setup(){
   size(480,480);
-  background(0,256,0);
   noLoop();
 }
 
@@ -9,7 +8,7 @@ void draw(){
   for(int y = 20; y<=480; y = y+40){
     for(int x = 20; x<=480; x = x+40){
       Woody = new die(x,y);
-      Woody.roll();
+      
       Woody.show();
     }
   }
@@ -30,15 +29,12 @@ class die{
     roll = 0;
   }
   
-  void roll(){
-    roll = (int)(Math.random()*6)+1;
-    
-    
-  }
+ 
   void show(){
     fill(256,256,256);
     rect(myX-20, myY-20, 40, 40);
     fill((int)(Math.random()*256), (int)(Math.random()*256), (int)(Math.random()*256));
+    roll = (int)(Math.random()*6)+1;
     if(roll==1){
       ellipse(myX, myY, 10, 10);
     }
