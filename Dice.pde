@@ -1,6 +1,7 @@
 die Woody;
 void setup(){
   size(480,480);
+  background(0,256,0);
   noLoop();
 }
 
